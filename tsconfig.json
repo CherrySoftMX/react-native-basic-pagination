@@ -10,12 +10,24 @@
     "target": "es6",
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true
+    "declaration": true,
+    "noEmit": false,
   },
-  "include": ["src/**/*"],
+  "include:": [
+    "index.tsx",
+    "props.ts",
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules",
     "**/*.test.tsx",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "__tests__",
+    "babel.*",
+    "metro.*",
+    "lib/**/*",
+    "**/*.d.ts",
+    "build",
+    "dist"
   ]
 }

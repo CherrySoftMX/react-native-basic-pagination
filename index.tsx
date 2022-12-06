@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { PaginationProps } from './props';
-import { usePagination, isCurrentPage } from '../hooks/usePagination';
-import { PaginationButton } from '../PaginationButton';
-import { PaginationSideButtons } from '../PaginationSideButtons';
+import { usePagination, isCurrentPage } from './src/hooks/usePagination';
+import { PaginationButton } from './src/PaginationButton';
+import { PaginationSideButtons } from './src/PaginationSideButtons';
 
 const Pagination = ({
   totalItems,
