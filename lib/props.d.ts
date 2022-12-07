@@ -4,6 +4,5 @@ export interface PaginationProps {
     pageSize: number;
     onPageChange: (page: number) => void;
     showLastPagesButtons?: boolean;
-    startOnPage?: number;
     currentPage: number;
 }
