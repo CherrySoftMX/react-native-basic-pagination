@@ -6,13 +6,12 @@ import { PaginationSideButtons } from './src/PaginationSideButtons';
 
 const Pagination = ({
   totalItems,
-  pageSize,
+  pageSize = 1,
   pagesToDisplay = 3,
-  onPageChange,
+  onPageChange = () => {},
   showLastPagesButtons = false,
-  startOnPage = 1,
+  currentPage = 1,
 }: PaginationProps) => {
-  const [currentPage, setCurrentPage] = useState(startOnPage);
   const [totalPages] = useState(Math.ceil(totalItems / pageSize));
   const pagination = usePagination(
     totalItems,
@@ -21,16 +20,19 @@ const Pagination = ({
     currentPage,
   );
 
+  useEffect(() => {
+    if (currentPage < 1) {
+      onPageChange(1);
+    } else if (currentPage > totalPages) {
+      onPageChange(totalPages);
+    }
+  }, [currentPage, totalPages, onPageChange]);
+
   const handleChangePage = (page: string) => {
     if (page !== '...') {
-      setCurrentPage(parseInt(page, 10));
       onPageChange(parseInt(page, 10));
     }
   };
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [totalItems, pageSize]);
 
   return (
     <PaginationSideButtons

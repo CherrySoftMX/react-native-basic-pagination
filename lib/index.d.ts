@@ -1,3 +1,3 @@
 import { PaginationProps } from './props';
-declare const Pagination: ({ totalItems, pageSize, pagesToDisplay, onPageChange, showLastPagesButtons, startOnPage, }: PaginationProps) => JSX.Element;
+declare const Pagination: ({ totalItems, pageSize, pagesToDisplay, onPageChange, showLastPagesButtons, currentPage, }: PaginationProps) => JSX.Element;
 export default Pagination;
