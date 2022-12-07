@@ -35,7 +35,7 @@ const App = () => {
 
 | Without last page buttons | With last page buttons | Display many pages |
 |------------|:-----------:|:-----------:|
-|<img src="https://raw.githubusercontent.com/Shadic78/react-native-basic-pagination/readme/assets/preview1.gif" width=300/>|<img src="https://raw.githubusercontent.com/Shadic78/react-native-basic-pagination/readme/assets/preview2.gif" width=300/>|<img src="https://raw.githubusercontent.com/Shadic78/react-native-basic-pagination/readme/assets/preview4.gif" width=300/>|
+|<img src="https://user-images.githubusercontent.com/43481488/206293498-8e0b8b28-7e81-4f4d-8c21-576a857953d1.gif" width=300/>|<img src="https://user-images.githubusercontent.com/43481488/206293605-45584ed4-7a16-4558-b1dc-e461208ea075.gif" width=300/>|<img src="https://user-images.githubusercontent.com/43481488/206293685-33d9fbd8-1604-4c78-81d3-70921ec9ceef.gif" width=300/>|
 
 > You can display as many pages as you want!
 
