@@ -12,6 +12,19 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "rm -rf ./lib && tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CherrySoftMX/react-native-basic-pagination.git"
+  },
+  "keywords": [
+    "react-native",
+    "pagination",
+    "paginate",
+    "react-native-component"
+  ],
+  "autor": "CherrySoftMx",
+  "license": "MIT",
+  "homepage": "https://github.com/CherrySoftMX/react-native-basic-pagination",
   "peerDependencies": {
     "expo": "*",
     "react": ">=18.0.0",
