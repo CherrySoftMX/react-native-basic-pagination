@@ -9,7 +9,7 @@ Welcome to react-native-basic-pagination!
 ## Installation
 
 ```
-npm install <>
+npm install @cherry-soft/react-native-basic-pagination
 ```
 
 ## Example
