@@ -1,6 +1,6 @@
 {
   "name": "@cherry-soft/react-native-basic-pagination",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Basic pagination component for React Native.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,10 +12,23 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "build": "rm -rf ./lib && tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CherrySoftMX/react-native-basic-pagination.git"
+  },
+  "keywords": [
+    "react-native",
+    "pagination",
+    "paginate",
+    "react-native-component"
+  ],
+  "autor": "CherrySoftMx",
+  "license": "MIT",
+  "homepage": "https://github.com/CherrySoftMX/react-native-basic-pagination",
   "peerDependencies": {
     "expo": "*",
-    "react": ">=16.9",
-    "react-native": ">=0.58"
+    "react": ">=18.0.0",
+    "react-native": ">=0.69"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -34,7 +47,7 @@
     "metro-react-native-babel-preset": "0.72.3",
     "react-test-renderer": "18.1.0",
     "typescript": "^4.8.3",
-    "react": "18.1.0",
+    "react": "18.0.0",
     "react-native": "^0.69"
   },
   "jest": {
