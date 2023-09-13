@@ -10,15 +10,23 @@ export const PaginationSideButtons = ({
   children,
   showLastPagesButtons = false,
   handleChangePage,
+  containerStyle,
+  textStyle,
+  btnStyle,
 }: PaginationSideButtonsProps) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       {showLastPagesButtons && (
-        <PaginationButton onPress={() => handleChangePage('1')}>
+        <PaginationButton
+          textStyle={textStyle}
+          btnStyle={btnStyle}
+          onPress={() => handleChangePage('1')}>
           {'<<'}
         </PaginationButton>
       )}
       <PaginationButton
+        textStyle={textStyle}
+        btnStyle={btnStyle}
         onPress={() =>
           currentPage > 1 && handleChangePage(`${currentPage - 1}`)
         }>
@@ -26,13 +34,18 @@ export const PaginationSideButtons = ({
       </PaginationButton>
       {children}
       <PaginationButton
+        textStyle={textStyle}
+        btnStyle={btnStyle}
         onPress={() =>
           currentPage < totalPages && handleChangePage(`${currentPage + 1}`)
         }>
         {'>'}
       </PaginationButton>
       {showLastPagesButtons && (
-        <PaginationButton onPress={() => handleChangePage(`${totalPages}`)}>
+        <PaginationButton
+          textStyle={textStyle}
+          btnStyle={btnStyle}
+          onPress={() => handleChangePage(`${totalPages}`)}>
           {'>>'}
         </PaginationButton>
       )}

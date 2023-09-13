@@ -7,12 +7,31 @@ export const PaginationButton = ({
   onPress = () => {},
   children,
   isActive = false,
+  btnStyle,
+  textStyle,
+  activeBtnStyle,
+  activeTextStyle,
 }: PaginationButtonProps) => {
   return (
     <Pressable
-      style={[styles.button, isActive && styles.buttonActive]}
+      style={[
+        styles.button,
+        btnStyle,
+        isActive ? (activeBtnStyle ? activeBtnStyle : styles.buttonActive) : {},
+      ]}
       onPress={onPress}>
-      <Text style={styles.text}>{children}</Text>
+      <Text
+        style={[
+          styles.text,
+          textStyle,
+          isActive
+            ? activeTextStyle
+              ? activeTextStyle
+              : styles.activeText
+            : {},
+        ]}>
+        {children}
+      </Text>
     </Pressable>
   );
 };

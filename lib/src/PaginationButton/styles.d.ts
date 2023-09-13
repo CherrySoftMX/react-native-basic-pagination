@@ -17,4 +17,7 @@ export declare const styles: {
         fontSize: number;
         alignSelf: "center";
     };
+    activeText: {
+        fontWeight: "bold";
+    };
 };
