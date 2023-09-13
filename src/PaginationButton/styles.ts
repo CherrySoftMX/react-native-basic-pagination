@@ -19,4 +19,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     alignSelf: 'center',
   },
+  activeText: {
+    fontWeight: 'bold',
+  },
 });

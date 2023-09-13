@@ -11,6 +11,11 @@ const Pagination = ({
   onPageChange,
   showLastPagesButtons = false,
   currentPage,
+  containerStyle = {},
+  btnStyle = {},
+  textStyle = {},
+  activeBtnStyle = null,
+  activeTextStyle = null,
 }: PaginationProps) => {
   const [totalPages] = useState(Math.ceil(totalItems / pageSize));
   const pagination = usePagination(
@@ -36,9 +41,21 @@ const Pagination = ({
 
   return (
     <PaginationSideButtons
-      {...{ totalPages, currentPage, handleChangePage, showLastPagesButtons }}>
+      {...{
+        totalPages,
+        currentPage,
+        handleChangePage,
+        showLastPagesButtons,
+        containerStyle,
+        btnStyle,
+        textStyle,
+      }}>
       {pagination.map((pag, index) => (
         <PaginationButton
+          btnStyle={btnStyle}
+          textStyle={textStyle}
+          activeBtnStyle={activeBtnStyle}
+          activeTextStyle={activeTextStyle}
           key={index}
           isActive={isCurrentPage(pag, currentPage)}
           onPress={() => handleChangePage(pag)}>

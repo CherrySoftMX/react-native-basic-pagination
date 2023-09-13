@@ -33,18 +33,24 @@ const App = () => {
 
 ## Preview
 
-| Without last page buttons | With last page buttons | Display many pages |
-|------------|:-----------:|:-----------:|
-|<img src="https://user-images.githubusercontent.com/43481488/206293498-8e0b8b28-7e81-4f4d-8c21-576a857953d1.gif" width=300/>|<img src="https://user-images.githubusercontent.com/43481488/206293605-45584ed4-7a16-4558-b1dc-e461208ea075.gif" width=300/>|<img src="https://user-images.githubusercontent.com/43481488/206293685-33d9fbd8-1604-4c78-81d3-70921ec9ceef.gif" width=300/>|
+| Without last page buttons                                                                                                        |                                                      With last page buttons                                                      |                                                        Display many pages                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------: |
+| `<img src="https://user-images.githubusercontent.com/43481488/206293498-8e0b8b28-7e81-4f4d-8c21-576a857953d1.gif" width=300/>` | `<img src="https://user-images.githubusercontent.com/43481488/206293605-45584ed4-7a16-4558-b1dc-e461208ea075.gif" width=300/>` | `<img src="https://user-images.githubusercontent.com/43481488/206293685-33d9fbd8-1604-4c78-81d3-70921ec9ceef.gif" width=300/>` |
 
 > You can display as many pages as you want!
 
 ## Props
-| Property | Default | Description |
-| ---------- | ------------ | ------- |
-| totalItems     | **required** | The amount of items contained in all pages.               |
-| currentPage    | **required** | The state which stores the current page.                  |
-| onPageChange   | **required** | A function which receives a number to handle the page change. *(page: number) => void* |
-| pageSize       | 1            | The amount of items per page.                             |
-| pagesToDisplay | 3            | The amount of buttons to display before the dots. ("...") |
-| showLastPageButtons | false | Show or hide the last pages buttons. ("<<" & ">>") |
+
+| Property            | Default            | Description                                                                             |
+| ------------------- | ------------------ | --------------------------------------------------------------------------------------- |
+| totalItems          | **required** | The amount of items contained in all pages.                                             |
+| currentPage         | **required** | The state which stores the current page.                                                |
+| onPageChange        | **required** | A function which receives a number to handle the page change.*(page: number) => void* |
+| pageSize            | 1                  | The amount of items per page.                                                           |
+| pagesToDisplay      | 3                  | The amount of buttons to display before the dots. ("...")                               |
+| showLastPageButtons | false              | Show or hide the last pages buttons. ("<<" & ">>")                                      |
+| containerStyle      | null               | Optional styles for the container.<br />Can be used to change width or flex direction.  |
+| btnStyle            | null               | Optional styles for the container of the buttons.                                       |
+| textStyle           | null               | Optional styles for the text of the buttons.                                            |
+| activeBtnStyle      | null               | Optional styles for the container of the current active page.                           |
+| activeTextStyle     | null               | Optional styles for the text of the current active page.                                |
