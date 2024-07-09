@@ -25,14 +25,6 @@ const Pagination = ({
     currentPage,
   );
 
-  useEffect(() => {
-    if (currentPage < 1) {
-      onPageChange(1);
-    } else if (currentPage > totalPages) {
-      onPageChange(totalPages);
-    }
-  }, [currentPage, totalPages, onPageChange]);
-
   const handleChangePage = (page: string) => {
     if (page !== '...') {
       onPageChange(parseInt(page, 10));
