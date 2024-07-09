@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { PaginationProps } from './props';
 import { usePagination, isCurrentPage } from './src/hooks/usePagination';
 import { PaginationButton } from './src/PaginationButton';
@@ -17,7 +17,7 @@ const Pagination = ({
   activeBtnStyle = null,
   activeTextStyle = null,
 }: PaginationProps) => {
-  const [totalPages] = useState(Math.ceil(totalItems / pageSize));
+  const totalPages = useMemo(() => Math.ceil(totalItems / pageSize), [totalItems, pageSize]);
   const pagination = usePagination(
     totalItems,
     pageSize,
