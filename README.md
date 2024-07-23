@@ -48,7 +48,7 @@ const App = () => {
 | onPageChange        | **required** | A function which receives a number to handle the page change.*(page: number) => void* |
 | pageSize            | 1                  | The amount of items per page.                                                           |
 | pagesToDisplay      | 3                  | The amount of buttons to display before the dots. ("...")                               |
-| showLastPageButtons | false              | Show or hide the last pages buttons. ("<<" & ">>")                                      |
+| showLastPagesButtons| false              | Show or hide the last pages buttons. ("<<" & ">>")                                      |
 | containerStyle      | null               | Optional styles for the container.<br />Can be used to change width or flex direction.  |
 | btnStyle            | null               | Optional styles for the container of the buttons.                                       |
 | textStyle           | null               | Optional styles for the text of the buttons.                                            |
